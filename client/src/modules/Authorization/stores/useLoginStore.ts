@@ -35,9 +35,7 @@ const useLogin = defineStore('login', () => {
   const { value: user } = useField<string>('user');
   const { value: password } = useField<string>('password');
 
-  const login = handleSubmit(async (payload: ILoginParams) => {
-    console.log(payload);
-    
+  const login = handleSubmit(async (payload: ILoginParams) => {    
     try {
       isLoading.value = true;
 
